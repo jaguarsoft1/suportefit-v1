@@ -1,0 +1,168 @@
+#promoPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(5px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#promoPopup.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-pascoa-content {
+  background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+  max-width: 600px;
+  width: 90%;
+  border-radius: 32px;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+  transform: scale(0.9);
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+
+#promoPopup.active .popup-pascoa-content {
+  transform: scale(1);
+}
+
+.popup-pascoa-header {
+  background: linear-gradient(135deg, #ff8c42, #ff6b2b);
+  padding: 20px;
+  text-align: center;
+}
+
+.popup-pascoa-header h2 {
+  margin: 0;
+  color: white;
+}
+
+.popup-pascoa-timer {
+  background: rgba(0,0,0,0.5);
+  padding: 15px;
+  text-align: center;
+}
+
+.timer-box {
+  display: inline-block;
+  background: #000;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border-radius: 12px;
+}
+
+.timer-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff8c42;
+}
+
+.timer-label {
+  font-size: 0.7rem;
+  color: #ccc;
+}
+
+.popup-urgencia {
+  background: linear-gradient(135deg, #ff3b3b, #ff0000);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.popup-pascoa-produtos {
+  padding: 20px;
+}
+
+.produto-item {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.produto-nome {
+  color: white;
+  font-weight: 600;
+}
+
+.produto-preco {
+  color: #ffaa66;
+  font-weight: bold;
+}
+
+.produto-preco-antigo {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 5px;
+}
+
+.btn-small-wpp {
+  background: #25D366;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-wpp-grande {
+  background: #25D366;
+  border: none;
+  border-radius: 50px;
+  padding: 14px;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.fechar-popup {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.btn-promo {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff3b3b, #ff7b00);
+  color: #fff;
+  padding: 14px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn-promo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 59, 59, 0.6);
+}
