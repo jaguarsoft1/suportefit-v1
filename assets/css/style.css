@@ -5,6 +5,18 @@
     box-sizing: border-box;
 }
 
+.jaguarsoft-logo {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.jaguarsoft-logo:hover {
+    opacity: 0.8;
+}
+
 :root {
     /* Cores Rosadas/Arroxeadas do site original */
     --primary: #E1306C;
