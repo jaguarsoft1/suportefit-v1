@@ -1,0 +1,187 @@
+#promoPopup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    backdrop-filter: blur(6px);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    padding: 15px;
+    overflow-y: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#promoPopup.active{
+    visibility: visible;
+    opacity:1;
+}
+
+.popup-pascoa-content{
+    position: relative;
+    width:100%;
+    max-width:720px;
+    max-height:95vh;
+    overflow-y:auto;
+    background:#111;
+    border-radius:22px;
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+    transform:scale(.95);
+    transition:.3s;
+}
+
+#promoPopup.active .popup-pascoa-content{
+    transform:scale(1);
+}
+
+.popup-pascoa-content::-webkit-scrollbar{
+    width:8px;
+}
+
+.popup-pascoa-content::-webkit-scrollbar-thumb{
+    background:#ff8c42;
+    border-radius:20px;
+}
+
+.popup-pascoa-header{
+    background:linear-gradient(135deg,#ff8c42,#ff5722);
+    padding:18px;
+    text-align:center;
+}
+
+.popup-pascoa-header h2{
+    color:#fff;
+    margin:0;
+    font-size:1.5rem;
+}
+
+.popup-imagem{
+    width:100%;
+}
+
+.popup-imagem img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.popup-pascoa-timer{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    padding:20px;
+    background:#181818;
+}
+
+.timer-box{
+    width:75px;
+    background:#000;
+    border-radius:14px;
+    padding:10px;
+    text-align:center;
+}
+
+.timer-number{
+    font-size:1.7rem;
+    color:#ff8c42;
+    font-weight:bold;
+}
+
+.timer-label{
+    font-size:.75rem;
+    color:#bbb;
+}
+
+.popup-urgencia{
+    background:#ff2e2e;
+    color:#fff;
+    padding:12px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.popup-pascoa-produtos{
+    padding:20px;
+}
+
+.fechar-popup{
+    position:absolute;
+    top:12px;
+    right:12px;
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.7);
+    color:#fff;
+    cursor:pointer;
+    font-size:24px;
+    z-index:10;
+}
+
+.fechar-popup:hover{
+    background:#ff3b3b;
+}
+
+/* BOTÃO WHATSAPP */
+
+.btn-whatsapp-popup{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    width:calc(100% - 40px);
+    margin:20px;
+    padding:18px;
+    border-radius:14px;
+    background:#25D366;
+    color:#fff;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-whatsapp-popup:hover{
+    transform:translateY(-2px);
+    background:#1ebe5d;
+    box-shadow:0 10px 30px rgba(37,211,102,.35);
+}
+
+.btn-whatsapp-popup i{
+    font-size:28px;
+}
+
+@media (max-width:768px){
+
+    .popup-pascoa-content{
+        width:100%;
+        max-height:97vh;
+        border-radius:18px;
+    }
+
+    .popup-pascoa-header h2{
+        font-size:1.15rem;
+    }
+
+    .timer-box{
+        width:60px;
+        padding:8px;
+    }
+
+    .timer-number{
+        font-size:1.3rem;
+    }
+
+    .btn-whatsapp-popup{
+        margin:15px;
+        width:calc(100% - 30px);
+        font-size:17px;
+        padding:15px;
+    }
+
+}
